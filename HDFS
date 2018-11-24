@@ -1,0 +1,38 @@
+Hadoop - HDFS - Hadoop Distributed File System
+
+- Managing data across multiple distributed file system
+- DFS is stored in cluster
+
+- Parallel Computing of data from different clusters
+- Processing time is reduced
+
+HDFS is a ditributed file system that allows you to store large data across cluster
+-Name Node
+	Maintain and managed Data Node
+	Records metadata and logs
+	Receives heartbeat and block report from data nodes
+
+-Data node
+	Stores actual data
+	serves as read or write request from name node to the clients
+	
+How data are stored in HDFS
+- Stored in blocks
+- Default sie is 128MB
+-Each data node is replicated thrice and are distributed across differenct data node
+
+HDFS commands
+
+HDFS DFS -ls -ltr
+HDFS DFS -mkdir
+HDFS DFS -put <FROMDIR> <TODIR>  <-- to copy file from local machine to HDFS
+HDFS DFS -copyFromLOCAL
+HDFS DFS -copyToLocal
+HDFS DFS -moveToLocal
+HDFS DFS -rm
+HDFS DFS -tail
+HDFS DFS -chmod
+
+
+
+HADOOP FSCK /usr/filename.gz <-- to get the block details of the data file
